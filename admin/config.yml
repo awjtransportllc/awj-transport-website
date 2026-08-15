@@ -36,6 +36,15 @@ collections:
               - { label: "Service Title", name: "title", widget: "string" }
               - { label: "Service Description", name: "description", widget: "text" }
 
+          - { label: "— CUSTOMER REVIEWS —", name: "reviews_divider", widget: "hidden", default: "" }
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            fields:
+              - { label: "Customer Name / Company", name: "name", widget: "string" }
+              - { label: "Rating (1-5)", name: "rating", widget: "select", options: ["5","4","3","2","1"] }
+              - { label: "Comment", name: "comment", widget: "text" }
+
           - { label: "— ABOUT SECTION —", name: "about_divider", widget: "hidden", default: "" }
           - { label: "About Title", name: "about_title", widget: "string" }
           - { label: "About Paragraph 1", name: "about_p1", widget: "text" }

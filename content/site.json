@@ -22,6 +22,11 @@
   "email_secondary": "awjtpt@gmail.com",
   "office_address": "A W J Transport LLC<br>Al Habai Building, Office No. 53<br>Fruit & Vegetable Market, Ras Al Khor<br>Dubai, United Arab Emirates",
   "logo_image": "",
+  "testimonials": [
+    {"name": "Ahmed K., Freight Forwarder", "rating": "5", "comment": "Smooth container pickup from Jebel Ali Port every time. Documentation was handled without any delays."},
+    {"name": "Sara M., Import/Export Co.", "rating": "5", "comment": "AWJ handled our customs clearance and company registration together. Saved us weeks of running around."},
+    {"name": "Rashid T., Retail Distributor", "rating": "4", "comment": "Reliable reefer container delivery, cold chain maintained properly. Good communication throughout."}
+  ],
   "services": [
     {"title": "Sea Freight Container Transportation", "description": "20ft and 40ft container haulage for import and export cargo, coordinated directly with port schedules across the UAE."},
     {"title": "Customs Clearance & Documentation", "description": "Import and export customs clearance handled end-to-end, with full documentation support so shipments move without delay."},
