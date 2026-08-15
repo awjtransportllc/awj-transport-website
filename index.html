@@ -107,11 +107,24 @@
     position:relative; z-index:2;
   }
   .hero h1{
-    font-size:clamp(38px, 5vw, 60px);
+    font-size:clamp(38px, 5vw, 58px);
     color:var(--navy);
-    margin:18px 0 22px;
+    margin:18px 0 24px;
   }
   .hero h1 em{font-style:normal; color:var(--gold-dim);}
+  .hero h1 em.hero-sub{font-size:0.52em; display:inline-block; margin-top:8px;}
+  .hero-points{
+    list-style:none; margin:0 0 26px; padding:0;
+    display:flex; flex-direction:column; gap:10px;
+  }
+  .hero-points li{
+    font-size:16px; color:var(--navy); font-weight:500;
+    padding-left:22px; position:relative;
+  }
+  .hero-points li::before{
+    content:''; position:absolute; left:0; top:9px;
+    width:12px; height:2px; background:var(--gold-dim);
+  }
   .hero p.lede{
     font-size:17px; color:var(--muted); max-width:520px; margin-bottom:34px; line-height:1.7;
   }
@@ -271,7 +284,13 @@
   <div class="wrap hero-grid">
     <div>
       <div class="eyebrow" data-key="hero_eyebrow">Ras Al Khor, Dubai · UAE-Wide Coverage</div>
-      <h1><span data-key="hero_title_line1">Container freight, customs</span><br><em data-key="hero_title_line2">cleared and delivered</em> <span data-key="hero_title_end">— without the delays.</span></h1>
+      <h1><span data-key="hero_title_line1">Goods Import & Export</span><br><em class="hero-sub" data-key="hero_title_line2">Customs Clearance and Transportation</em></h1>
+      <ul class="hero-points">
+        <li>Sea and air cargo clearance</li>
+        <li>Documentation</li>
+        <li>New company registration</li>
+        <li>Reefer and dry containers transportation</li>
+      </ul>
       <p class="lede" data-key="hero_lede">A W J TRANSPORT LLC handles sea freight container transportation, import/export customs clearance, port handling and cargo delivery across the UAE — from documentation to final delivery, managed by one team.</p>
       <div class="btn-row">
         <a href="#contact" class="btn btn-primary">Request a Quote →</a>
@@ -452,9 +471,6 @@
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </div>
-    </div>
-    <div style="display:flex; justify-content:flex-end; padding:24px 0 8px;">
-      <img src="/images/office_banner.png" alt="A W J Transport LLC — Office 53, Al Habai Building, Ras Al Khor, Dubai" class="foot-banner" style="width:100%;">
     </div>
     <div class="foot-bottom">
       <span>© 2026 A W J Transport LLC. All rights reserved.</span>
