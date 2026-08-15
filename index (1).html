@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A W J TRANSPORT LLC | Transportation, Logistics & Customs Clearing — Dubai, UAE</title>
+<meta name="description" content="A W J TRANSPORT LLC — Sea freight container transportation, import/export customs clearance, port handling, and cargo delivery across the UAE. Based in Ras Al Khor, Dubai.">
+<link rel="icon" type="image/png" href="/images/logo_on_white.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1A2438;
+    --steel:#F1EFEA;
+    --steel-light:#E7E4DD;
+    --gold:#B8963C;
+    --gold-dim:#8A7530;
+    --concrete:#F4F2ED;
+    --paper:#FFFFFF;
+    --ink:#1A2438;
+    --muted:#68707c;
+    --line:rgba(26,36,56,0.12);
+    --line-light:rgba(26,36,56,0.10);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Work Sans', sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Barlow Condensed', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.02em;
+    font-weight:700;
+    color:var(--navy);
+    line-height:1.05;
+  }
+  .mono{font-family:'JetBrains Mono', monospace; letter-spacing:0.03em;}
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--gold-dim);
+    font-weight:500;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{content:''; width:22px; height:2px; background:var(--gold); display:inline-block;}
+
+  /* ===== HEADER ===== */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    background:rgba(255,255,255,0.97);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    max-width:1180px; margin:0 auto; padding:0 28px;
+    height:92px; display:flex; align-items:center; justify-content:space-between;
+  }
+  .brand{display:flex; align-items:center;}
+  .brand-logo-img{height:70px; width:auto;}
+  nav.links{display:flex; gap:34px; align-items:center;}
+  nav.links a{
+    color:#4a5568; font-size:13.5px; text-transform:uppercase; letter-spacing:0.08em;
+    font-weight:500; transition:color .2s;
+  }
+  nav.links a:hover{color:var(--gold-dim);}
+  .nav-cta{
+    background:var(--gold); color:#fff!important; padding:10px 20px;
+    font-weight:700; font-size:13px; text-transform:uppercase; letter-spacing:0.06em;
+  }
+  .nav-cta:hover{background:#a2842f;}
+  .burger{display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none;}
+  .burger span{width:24px; height:2px; background:var(--navy);}
+  .social-row{display:flex; gap:14px; align-items:center;}
+  .social-icon{color:#4a5568; display:flex; transition:color .2s;}
+  .social-icon:hover{color:var(--gold-dim);}
+
+  /* ===== HERO ===== */
+  .hero{
+    background:var(--concrete);
+    color:var(--ink);
+    padding:174px 0 80px;
+    position:relative;
+    overflow:hidden;
+    border-bottom:1px solid var(--line);
+  }
+  .hero::after{
+    content:'';
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(rgba(26,36,56,0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(26,36,56,0.035) 1px, transparent 1px);
+    background-size:44px 44px;
+    pointer-events:none;
+  }
+  .hero-grid{
+    display:grid; grid-template-columns:1.05fr 0.95fr; gap:60px; align-items:center;
+    position:relative; z-index:2;
+  }
+  .hero h1{
+    font-size:clamp(38px, 5vw, 58px);
+    color:var(--navy);
+    margin:18px 0 24px;
+  }
+  .hero h1 em{font-style:normal; color:var(--gold-dim);}
+  .hero h1 em.hero-sub{font-size:0.52em; display:inline-block; margin-top:8px;}
+  .hero-points{
+    list-style:none; margin:0 0 26px; padding:0;
+    display:flex; flex-direction:column; gap:10px;
+  }
+  .hero-points li{
+    font-size:16px; color:var(--navy); font-weight:500;
+    padding-left:22px; position:relative;
+  }
+  .hero-points li::before{
+    content:''; position:absolute; left:0; top:9px;
+    width:12px; height:2px; background:var(--gold-dim);
+  }
+  .hero p.lede{
+    font-size:17px; color:var(--muted); max-width:520px; margin-bottom:34px; line-height:1.7;
+  }
+  .btn-row{display:flex; gap:16px; flex-wrap:wrap;}
+  .btn{
+    padding:14px 26px; font-weight:600; font-size:14px; text-transform:uppercase;
+    letter-spacing:0.05em; display:inline-flex; align-items:center; gap:8px;
+    border:1px solid transparent; transition:all .2s;
+  }
+  .btn-primary{background:var(--gold); color:#fff;}
+  .btn-primary:hover{background:#a2842f; transform:translateY(-1px);}
+  .btn-ghost{border-color:var(--navy); color:var(--navy);}
+  .btn-ghost:hover{border-color:var(--gold-dim); color:var(--gold-dim);}
+
+  .stat-row{
+    display:flex; gap:0; margin-top:48px; border-top:1px solid var(--line); padding-top:26px;
+  }
+  .stat{flex:1; padding-right:20px;}
+  .stat .num{font-family:'Barlow Condensed'; font-size:32px; font-weight:700; color:var(--gold-dim);}
+  .stat .lbl{font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:0.06em; margin-top:4px;}
+  .tagline-row{
+    margin-top:22px; font-family:'JetBrains Mono'; font-size:12px; letter-spacing:0.14em;
+    text-transform:uppercase; color:var(--muted);
+  }
+  .tagline-row span{color:var(--gold-dim); margin:0 6px;}
+
+  .map-box{
+    background:#fff;
+    border:1px solid var(--line);
+    box-shadow:0 4px 24px rgba(26,36,56,0.06);
+    padding:26px;
+    position:relative;
+  }
+  .map-box .cap{
+    display:flex; justify-content:space-between; align-items:center;
+    margin-bottom:14px; font-family:'JetBrains Mono'; font-size:11px; color:var(--muted);
+    text-transform:uppercase; letter-spacing:0.08em;
+  }
+  .dot-live{width:7px; height:7px; background:var(--gold-dim); border-radius:50%; display:inline-block; animation:pulse 1.6s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;} 50%{opacity:0.35;}}
+  .route-path{
+    stroke-dasharray:6 220; stroke-dashoffset:0;
+    animation:dash 3.5s linear infinite;
+  }
+  @keyframes dash{ to { stroke-dashoffset:-226; } }
+
+  /* ===== SECTION BASE ===== */
+  section{padding:90px 0;}
+  .sec-head{max-width:640px; margin-bottom:52px;}
+  .sec-head h2{font-size:clamp(28px,3.4vw,42px); margin-top:14px;}
+  .sec-head p{color:var(--muted); font-size:15.5px; margin-top:14px; max-width:560px;}
+
+  /* ===== SERVICES ===== */
+  .services{background:var(--concrete);}
+  .svc-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+  .svc-card{background:var(--paper); padding:34px 28px; position:relative;}
+  .svc-num{font-family:'JetBrains Mono'; font-size:12px; color:var(--gold-dim); font-weight:600;}
+  .svc-card h3{font-size:22px; margin:16px 0 10px;}
+  .svc-card p{font-size:14px; color:var(--muted); line-height:1.65;}
+  .svc-icon{width:44px; height:44px; margin-bottom:6px;}
+
+  /* ===== PROCESS ===== */
+  .process{background:var(--steel);}
+  .process .sec-head h2, .process .eyebrow{color:var(--navy);}
+  .process .sec-head p{color:var(--muted);}
+  .proc-line{display:flex; border-top:1px solid var(--line);}
+  .proc-step{flex:1; padding:28px 20px 0; border-right:1px solid var(--line); position:relative;}
+  .proc-step:last-child{border-right:none;}
+  .proc-step .pn{
+    font-family:'Barlow Condensed'; font-size:44px; font-weight:700; color:rgba(184,150,60,0.35);
+    line-height:1;
+  }
+  .proc-step h4{color:var(--navy); font-size:16px; margin:14px 0 8px; text-transform:none; letter-spacing:0;}
+  .proc-step p{font-size:13px; color:var(--muted); line-height:1.6;}
+  .proc-dot{position:absolute; top:-6px; left:0; width:10px; height:10px; background:var(--gold-dim);}
+
+  /* ===== FLEET ===== */
+  .fleet-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  .fleet-card{border:1px solid var(--line); padding:26px 20px; text-align:left; background:var(--paper); transition:border-color .2s;}
+  .fleet-card:hover{border-color:var(--gold);}
+  .fleet-card svg{width:100%; height:64px; margin-bottom:18px;}
+  .fleet-card h4{font-size:18px; margin-bottom:6px;}
+  .fleet-card p{font-size:13px; color:var(--muted);}
+
+  /* ===== ABOUT ===== */
+  .about{background:var(--concrete);}
+  .about-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:60px; align-items:center;}
+  .about-visual{background:var(--navy); aspect-ratio:4/5; position:relative; overflow:hidden; border:1px solid var(--line);}
+  .about-body p{color:var(--muted); font-size:15.5px; margin-bottom:16px;}
+  .cred-row{display:flex; gap:0; margin-top:30px; border-top:1px solid var(--line); padding-top:24px;}
+  .cred{flex:1; padding-right:16px;}
+  .cred .t{font-family:'Barlow Condensed'; font-weight:700; font-size:15px; color:var(--navy);}
+  .cred .s{font-size:12.5px; color:var(--muted); margin-top:3px;}
+
+  /* ===== CONTACT ===== */
+  .contact{background:var(--concrete);}
+  .contact .eyebrow{color:var(--gold-dim);}
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:60px;}
+  .c-block{margin-bottom:26px;}
+  .c-block .lbl{font-family:'JetBrains Mono'; font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px;}
+  .c-block .val{font-size:17px; color:var(--navy); font-weight:500;}
+  .c-block .val a{border-bottom:1px solid rgba(184,150,60,0.5);}
+  .c-block .val a:hover{color:var(--gold-dim); border-color:var(--gold-dim);}
+  form.quote{background:#fff; padding:34px; border:1px solid var(--line); box-shadow:0 4px 24px rgba(26,36,56,0.05);}
+  form.quote .row{margin-bottom:18px;}
+  form.quote label{display:block; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--muted); margin-bottom:7px;}
+  form.quote input, form.quote select, form.quote textarea{
+    width:100%; background:var(--concrete); border:1px solid var(--line);
+    color:var(--navy); padding:12px 14px; font-family:'Work Sans'; font-size:14px;
+  }
+  form.quote input:focus, form.quote select:focus, form.quote textarea:focus{outline:none; border-color:var(--gold-dim);}
+  form.quote textarea{resize:vertical; min-height:90px;}
+  form.quote button{width:100%; margin-top:6px;}
+
+  /* ===== FOOTER ===== */
+  footer{background:#F4F2ED; color:var(--muted); padding:44px 0 26px; border-top:1px solid var(--line);}
+  .foot-grid{display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:24px; border-bottom:1px solid var(--line); padding-bottom:30px;}
+  .foot-links{display:flex; gap:30px; font-size:13px;}
+  .foot-links a:hover{color:var(--gold-dim);}
+  .foot-bottom{padding-top:22px; display:flex; justify-content:space-between; font-size:12px; flex-wrap:wrap; gap:10px;}
+  .foot-banner{max-width:280px; opacity:0.92;}
+
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr; gap:40px;}
+    .svc-grid{grid-template-columns:1fr;}
+    .about-grid{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;}
+    .fleet-grid{grid-template-columns:repeat(2,1fr);}
+    .proc-line{flex-direction:column;}
+    .proc-step{border-right:none; border-bottom:1px solid var(--line-light); padding-bottom:24px;}
+    nav.links{display:none;}
+    .burger{display:flex;}
+    .stat-row{flex-wrap:wrap; gap:20px;}
+  }
+
+  /* ===== REVIEWS ===== */
+  .reviews{background:var(--paper);}
+  .google-badge{
+    display:flex; align-items:center; gap:18px; background:var(--concrete);
+    border:1px solid var(--line); padding:22px 26px; margin-bottom:44px; flex-wrap:wrap;
+  }
+  .google-badge .stars{color:#E8A736; font-size:20px; letter-spacing:2px;}
+  .google-badge .g-text{font-size:14px; color:var(--muted);}
+  .google-badge .g-text strong{color:var(--navy); font-family:'Barlow Condensed'; font-size:18px;}
+  .google-badge .btn-primary{margin-left:auto;}
+  .testi-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-bottom:52px;}
+  .testi-card{background:var(--concrete); border:1px solid var(--line); padding:26px;}
+  .testi-card .stars{color:#E8A736; font-size:14px; letter-spacing:2px; margin-bottom:12px;}
+  .testi-card p{font-size:14px; color:var(--navy); line-height:1.65; margin-bottom:14px;}
+  .testi-card .who{font-family:'JetBrains Mono'; font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:0.05em;}
+  form.review{background:#fff; border:1px solid var(--line); padding:34px; max-width:640px; box-shadow:0 4px 24px rgba(26,36,56,0.05);}
+  form.review .row{margin-bottom:18px;}
+  form.review label{display:block; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--muted); margin-bottom:7px;}
+  form.review input, form.review select, form.review textarea{
+    width:100%; background:var(--concrete); border:1px solid var(--line);
+    color:var(--navy); padding:12px 14px; font-family:'Work Sans'; font-size:14px;
+  }
+  form.review input:focus, form.review select:focus, form.review textarea:focus{outline:none; border-color:var(--gold-dim);}
+  form.review textarea{resize:vertical; min-height:80px;}
+  .map-embed{border:1px solid var(--line); overflow:hidden; margin-top:18px;}
+  .map-embed iframe{display:block; width:100%; height:260px; border:0;}
+
+  @media(max-width:900px){
+    .testi-grid{grid-template-columns:1fr;}
+    .google-badge .btn-primary{margin-left:0;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand" id="brand-logo-slot">
+      <img src="/images/logo_on_white.png" alt="A W J Transport LLC logo" class="brand-logo-img">
+    </div>
+    <nav class="links">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#fleet">Fleet</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#about">About</a>
+      <span class="social-row">
+        <a href="https://www.instagram.com/awj_transport_llc/" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@awjtransportllc" target="_blank" rel="noopener" aria-label="TikTok" class="social-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 2c.3 2.4 1.8 4 4.5 4.2v3c-1.6.1-3-.4-4.5-1.4v6.7c0 3.6-2.9 6.5-6.5 6.5S3.5 17.9 3.5 14.3c0-3.5 2.8-6.4 6.3-6.5v3.1a3.3 3.3 0 1 0 3.3 3.3V2h3.4z"/></svg>
+        </a>
+      </span>
+      <a href="#contact" class="nav-cta">Get a Quote</a>
+    </nav>
+    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow" data-key="hero_eyebrow">Ras Al Khor, Dubai · UAE-Wide Coverage</div>
+      <h1><span data-key="hero_title_line1">Goods Import & Export</span><br><em class="hero-sub" data-key="hero_title_line2">Customs Clearance and Transportation</em></h1>
+      <ul class="hero-points">
+        <li>Sea and air cargo clearance</li>
+        <li>Documentation</li>
+        <li>New company registration</li>
+        <li>Reefer and dry containers transportation</li>
+      </ul>
+      <p class="lede" data-key="hero_lede">A W J TRANSPORT LLC handles sea freight container transportation, import/export customs clearance, port handling and cargo delivery across the UAE — from documentation to final delivery, managed by one team.</p>
+      <div class="btn-row">
+        <a href="#contact" class="btn btn-primary">Request a Quote →</a>
+        <a href="https://wa.me/971551042144" target="_blank" class="btn btn-ghost" id="hero-whatsapp">WhatsApp Us</a>
+      </div>
+      <div class="stat-row">
+        <div class="stat"><div class="num" data-key="stat1_num">20ft / 40ft</div><div class="lbl" data-key="stat1_label">Container Trailers</div></div>
+        <div class="stat"><div class="num" data-key="stat2_num">Reefer + Dry</div><div class="lbl" data-key="stat2_label">Container Types</div></div>
+        <div class="stat"><div class="num" data-key="stat3_num">7 Emirates</div><div class="lbl" data-key="stat3_label">Delivery Coverage</div></div>
+      </div>
+      <div class="tagline-row">Trust <span>·</span> Transparency <span>·</span> Tranquility</div>
+    </div>
+    <div class="map-box">
+      <div class="cap"><span><span class="dot-live"></span> Live Route — Ras Al Khor → Jebel Ali Port</span><span>UAE</span></div>
+      <svg viewBox="0 0 460 420" width="100%" height="auto">
+        <path d="M60 40 L120 30 L200 55 L270 90 L330 150 L370 220 L390 290 L360 350 L300 390 L230 400 L170 380 L120 340 L90 280 L70 210 L55 140 Z"
+          fill="none" stroke="rgba(26,36,56,0.18)" stroke-width="1.5"/>
+        <path d="M255 195 C 210 220, 150 250, 95 275" fill="none" stroke="rgba(184,150,60,0.9)" stroke-width="2.5" class="route-path" stroke-linecap="round"/>
+        <path d="M255 195 C 290 230, 320 270, 330 320" fill="none" stroke="rgba(184,150,60,0.55)" stroke-width="2" stroke-dasharray="4 6"/>
+        <circle cx="255" cy="195" r="6" fill="#B8963C"/>
+        <text x="266" y="192" fill="#1A2438" font-family="JetBrains Mono" font-size="11">Ras Al Khor HQ</text>
+        <circle cx="95" cy="275" r="5" fill="#1A2438"/>
+        <text x="55" y="298" fill="#4a5568" font-family="JetBrains Mono" font-size="10">Jebel Ali Port</text>
+        <circle cx="330" cy="320" r="5" fill="#1A2438"/>
+        <text x="300" y="345" fill="#4a5568" font-family="JetBrains Mono" font-size="10">Khalifa Port</text>
+        <circle cx="200" cy="80" r="4" fill="#8a94a3"/>
+        <text x="150" y="70" fill="#8a94a3" font-family="JetBrains Mono" font-size="10">Sharjah</text>
+        <circle cx="330" cy="150" r="4" fill="#8a94a3"/>
+        <text x="340" y="145" fill="#8a94a3" font-family="JetBrains Mono" font-size="10">Fujairah</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">What We Do</div>
+      <h2>Complete logistics, under one roof.</h2>
+      <p>From company registration for logistics operations to the final drop-off, we manage every stage of the container journey.</p>
+    </div>
+    <div class="svc-grid" id="services-grid"></div>
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">How It Works</div>
+      <h2>One shipment, five checkpoints.</h2>
+      <p>Every container moves through the same controlled sequence — so nothing is missed between the port and your door.</p>
+    </div>
+    <div class="proc-line">
+      <div class="proc-step"><div class="proc-dot"></div><div class="pn">01</div><h4>Registration</h4><p>Company & account setup for logistics/customs activity, if required.</p></div>
+      <div class="proc-step"><div class="proc-dot"></div><div class="pn">02</div><h4>Documentation</h4><p>Import/export paperwork prepared and verified before the container moves.</p></div>
+      <div class="proc-step"><div class="proc-dot"></div><div class="pn">03</div><h4>Port Clearance</h4><p>Coordination at Jebel Ali / Khalifa Port for release and handover.</p></div>
+      <div class="proc-step"><div class="proc-dot"></div><div class="pn">04</div><h4>Transportation</h4><p>Container moved by our Volvo trucks and trailer fleet to destination.</p></div>
+      <div class="proc-step"><div class="proc-dot"></div><div class="pn">05</div><h4>Final Delivery</h4><p>Cargo delivered and confirmed, anywhere in the UAE.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FLEET ===== -->
+<section id="fleet">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Our Fleet</div>
+      <h2>Built for containers, built for the UAE roads.</h2>
+      <p>Volvo trucks paired with a trailer fleet configured for every cargo type we handle.</p>
+    </div>
+    <div class="fleet-grid">
+      <div class="fleet-card">
+        <svg viewBox="0 0 100 50"><rect x="4" y="18" width="42" height="20" fill="none" stroke="#0B1730" stroke-width="2"/><path d="M46 22h18l14 12v4H46z" fill="none" stroke="#0B1730" stroke-width="2"/><circle cx="18" cy="42" r="5" fill="none" stroke="#C0A542" stroke-width="2"/><circle cx="68" cy="42" r="5" fill="none" stroke="#C0A542" stroke-width="2"/><circle cx="84" cy="42" r="5" fill="none" stroke="#C0A542" stroke-width="2"/></svg>
+        <h4>Volvo Prime Movers</h4>
+        <p>Highway tractor units for long-haul container and trailer transport.</p>
+      </div>
+      <div class="fleet-card">
+        <svg viewBox="0 0 100 50"><rect x="8" y="20" width="84" height="16" fill="none" stroke="#0B1730" stroke-width="2"/><circle cx="24" cy="40" r="5" fill="none" stroke="#C0A542" stroke-width="2"/><circle cx="76" cy="40" r="5" fill="none" stroke="#C0A542" stroke-width="2"/></svg>
+        <h4>Flatbed Trailers</h4>
+        <p>Open-deck flatbeds for oversized and palletized freight.</p>
+      </div>
+      <div class="fleet-card">
+        <svg viewBox="0 0 100 50"><rect x="10" y="14" width="70" height="26" fill="none" stroke="#0B1730" stroke-width="2"/><rect x="15" y="19" width="60" height="16" fill="none" stroke="#C0A542" stroke-width="1.4"/><circle cx="26" cy="42" r="5" fill="none" stroke="#0B1730" stroke-width="2"/><circle cx="64" cy="42" r="5" fill="none" stroke="#0B1730" stroke-width="2"/></svg>
+        <h4>20ft / 40ft Containers</h4>
+        <p>Dry container trailers sized to standard sea-freight units.</p>
+      </div>
+      <div class="fleet-card">
+        <svg viewBox="0 0 100 50"><rect x="10" y="14" width="70" height="26" fill="none" stroke="#0B1730" stroke-width="2"/><rect x="4" y="20" width="8" height="14" fill="#C0A542" stroke="none"/><circle cx="26" cy="42" r="5" fill="none" stroke="#0B1730" stroke-width="2"/><circle cx="64" cy="42" r="5" fill="none" stroke="#0B1730" stroke-width="2"/></svg>
+        <h4>Reefer + Genset</h4>
+        <p>Refrigerated containers with genset service for cold-chain cargo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Customer Feedback</div>
+      <h2>Reviews &amp; Ratings</h2>
+      <p>Real feedback from businesses we've moved cargo for across the UAE.</p>
+    </div>
+
+    <div class="google-badge">
+      <div class="stars">★★★★★</div>
+      <div class="g-text"><strong>Rated on Google</strong><br>See our latest reviews or leave your own</div>
+      <a href="https://share.google/bBxIeCJcdUiCtl7gQ" target="_blank" rel="noopener" class="btn btn-primary">View on Google →</a>
+    </div>
+
+    <div class="testi-grid" id="testimonials-grid"></div>
+
+    <div class="sec-head" style="margin-bottom:28px;">
+      <div class="eyebrow">Share Your Feedback</div>
+      <h2 style="font-size:26px;">Tell us how we did.</h2>
+    </div>
+    <form class="review" name="customer-review" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="customer-review">
+      <div class="row"><label>Your Name</label><input type="text" name="name" required></div>
+      <div class="row"><label>Company (optional)</label><input type="text" name="company"></div>
+      <div class="row">
+        <label>Rating</label>
+        <select name="rating" required>
+          <option value="5">★★★★★ Excellent</option>
+          <option value="4">★★★★ Good</option>
+          <option value="3">★★★ Average</option>
+          <option value="2">★★ Below Average</option>
+          <option value="1">★ Poor</option>
+        </select>
+      </div>
+      <div class="row"><label>Your Feedback</label><textarea name="feedback" placeholder="Tell us about your experience..." required></textarea></div>
+      <button type="submit" class="btn btn-primary">Submit Feedback →</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-visual" style="background:#fff; display:flex; align-items:center; justify-content:center; padding:32px;">
+      <img src="/images/logo_on_white.png" alt="A W J Transport LLC" style="width:100%; height:auto;">
+    </div>
+    <div class="about-body">
+      <div class="eyebrow">About Us</div>
+      <h2 data-key="about_title">A trusted logistics partner based in Ras Al Khor.</h2>
+      <p data-key="about_p1">A W J TRANSPORT LLC is a transportation, logistics, and customs clearing company providing complete logistics solutions across the UAE.</p>
+      <p data-key="about_p2">We specialize in sea freight container transportation, import and export customs clearance, documentation, port handling, cargo delivery, and business registration support. Our experienced team manages the complete logistics process — from company and account registration for logistics and customs purposes, to customs documentation, port clearance, container transportation, and final delivery. We assist businesses with the procedures and documentation required to establish and operate their logistics and customs activities smoothly and efficiently.</p>
+      <div class="cred-row">
+        <div class="cred"><div class="t" data-key="ceo_name">Muhammad Jabeer</div><div class="s" data-key="ceo_title">CEO & Manager</div></div>
+        <div class="cred"><div class="t">Ras Al Khor, Dubai</div><div class="s">Head Office</div></div>
+        <div class="cred"><div class="t">UAE-Wide</div><div class="s">Delivery Coverage</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Get In Touch</div>
+      <h2>Request a quote or ask about your shipment.</h2>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="c-block">
+          <div class="lbl" id="ceo-label">CEO & Manager — Muhammad Jabeer</div>
+          <div class="val"><a href="tel:+971551042144" id="ceo-tel">+971 55 104 2144</a> &nbsp;·&nbsp; <a href="https://wa.me/971551042144" target="_blank" id="ceo-wa">WhatsApp</a></div>
+        </div>
+        <div class="c-block">
+          <div class="lbl">Office Administration</div>
+          <div class="val"><a href="tel:+971524308165" id="office-tel">+971 52 430 8165</a> &nbsp;·&nbsp; <a href="https://wa.me/971524308165" target="_blank" id="office-wa">WhatsApp</a></div>
+        </div>
+        <div class="c-block">
+          <div class="lbl">Email</div>
+          <div class="val"><a href="mailto:info@awjtransportllc.ae" id="email-primary">info@awjtransportllc.ae</a></div>
+          <div class="val" style="font-size:14px; margin-top:4px;"><a href="mailto:awjtpt@gmail.com" id="email-secondary">awjtpt@gmail.com</a></div>
+        </div>
+        <div class="c-block">
+          <div class="lbl">Head Office</div>
+          <div class="val" style="font-weight:400; font-size:15px; line-height:1.6;" data-key-html="office_address">A W J Transport LLC<br>Al Habai Building, Office No. 53<br>Fruit & Vegetable Market, Ras Al Khor<br>Dubai, United Arab Emirates</div>
+          <div class="map-embed">
+            <iframe src="https://www.google.com/maps?q=Al+Habai+Building+Office+53+Fruit+and+Vegetable+Market+Ras+Al+Khor+Dubai&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="A W J Transport LLC location"></iframe>
+          </div>
+          <a href="https://share.google/bBxIeCJcdUiCtl7gQ" target="_blank" rel="noopener" style="display:inline-block; margin-top:10px; font-size:13px; color:var(--gold-dim); border-bottom:1px solid rgba(184,150,60,0.5);">Open in Google Maps →</a>
+        </div>
+      </div>
+      <form class="quote" name="quote-request" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="quote-request">
+        <div class="row"><label>Full Name</label><input type="text" name="name" required></div>
+        <div class="row"><label>Company</label><input type="text" name="company"></div>
+        <div class="row"><label>Phone / WhatsApp</label><input type="tel" name="phone" required></div>
+        <div class="row">
+          <label>Service Needed</label>
+          <select name="service">
+            <option>Container Transportation</option>
+            <option>Customs Clearance</option>
+            <option>Company Registration</option>
+            <option>Documentation</option>
+            <option>Port Handling</option>
+            <option>Reefer / Genset Service</option>
+            <option>Flatbed Trailer</option>
+            <option>Business Registration Support</option>
+            <option>Other Services</option>
+          </select>
+        </div>
+        <div class="row"><label>Shipment Details</label><textarea name="message" placeholder="Container type, size, origin/destination..."></textarea></div>
+        <button type="submit" class="btn btn-primary">Send Request →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><img src="/images/logo.png" alt="A W J Transport LLC" style="height:56px; width:auto;"></div>
+      <div class="foot-links">
+        <a href="#services">Services</a>
+        <a href="#fleet">Fleet</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <span class="social-row">
+          <a href="https://www.instagram.com/awj_transport_llc/" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@awjtransportllc" target="_blank" rel="noopener" aria-label="TikTok" class="social-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 2c.3 2.4 1.8 4 4.5 4.2v3c-1.6.1-3-.4-4.5-1.4v6.7c0 3.6-2.9 6.5-6.5 6.5S3.5 17.9 3.5 14.3c0-3.5 2.8-6.4 6.3-6.5v3.1a3.3 3.3 0 1 0 3.3 3.3V2h3.4z"/></svg>
+          </a>
+        </span>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 A W J Transport LLC. All rights reserved.</span>
+      <span>Ras Al Khor, Dubai, UAE</span>
+    </div>
+  </div>
+</footer>
+
+<form name="quote-request" data-netlify="true" hidden>
+  <input type="text" name="name" />
+  <input type="text" name="company" />
+  <input type="tel" name="phone" />
+  <select name="service">
+    <option>Container Transportation</option>
+    <option>Customs Clearance</option>
+    <option>Company Registration</option>
+    <option>Documentation</option>
+    <option>Port Handling</option>
+    <option>Reefer / Genset Service</option>
+    <option>Flatbed Trailer</option>
+    <option>Business Registration Support</option>
+    <option>Other Services</option>
+  </select>
+  <textarea name="message"></textarea>
+</form>
+
+<form name="customer-review" data-netlify="true" hidden>
+  <input type="text" name="name" />
+  <input type="text" name="company" />
+  <select name="rating">
+    <option value="5">5</option>
+    <option value="4">4</option>
+    <option value="3">3</option>
+    <option value="2">2</option>
+    <option value="1">1</option>
+  </select>
+  <textarea name="feedback"></textarea>
+</form>
+
+<script>
+  document.querySelector('.burger').addEventListener('click', function(){
+    document.querySelector('nav.links').classList.toggle('mobile-open');
+  });
+
+  const svcIcons = [
+    '<svg class="svc-icon" viewBox="0 0 48 48" fill="none"><rect x="6" y="16" width="36" height="20" stroke="#0B1730" stroke-width="2"/><path d="M6 22h36M18 16v20M30 16v20" stroke="#C0A542" stroke-width="1.6"/></svg>',
+    '<svg class="svc-icon" viewBox="0 0 48 48" fill="none"><rect x="8" y="6" width="32" height="36" stroke="#0B1730" stroke-width="2"/><path d="M14 16h20M14 24h20M14 32h12" stroke="#C0A542" stroke-width="1.6"/></svg>',
+    '<svg class="svc-icon" viewBox="0 0 48 48" fill="none"><path d="M24 4l16 8v16l-16 8-16-8V12z" stroke="#0B1730" stroke-width="2"/><path d="M24 4v16m0 0l16-8m-16 8L8 12" stroke="#C0A542" stroke-width="1.6"/></svg>',
+    '<svg class="svc-icon" viewBox="0 0 48 48" fill="none"><rect x="10" y="20" width="16" height="14" stroke="#0B1730" stroke-width="2"/><path d="M26 24h8l4 6v4h-12z" stroke="#0B1730" stroke-width="2"/><circle cx="16" cy="36" r="3" stroke="#C0A542" stroke-width="1.6"/><circle cx="32" cy="36" r="3" stroke="#C0A542" stroke-width="1.6"/></svg>',
+    '<svg class="svc-icon" viewBox="0 0 48 48" fill="none"><rect x="6" y="24" width="36" height="8" stroke="#0B1730" stroke-width="2"/><circle cx="14" cy="36" r="3" stroke="#C0A542" stroke-width="1.6"/><circle cx="34" cy="36" r="3" stroke="#C0A542" stroke-width="1.6"/></svg>',
+    '<svg class="svc-icon" viewBox="0 0 48 48" fill="none"><path d="M8 40V16l16-10 16 10v24" stroke="#0B1730" stroke-width="2"/><path d="M18 40V26h12v14" stroke="#C0A542" stroke-width="1.6"/></svg>'
+  ];
+
+  fetch('/content/site.json', { cache: 'no-store' })
+    .then(r => r.json())
+    .then(data => {
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (data[key]) el.textContent = data[key];
+      });
+      document.querySelectorAll('[data-key-html]').forEach(el => {
+        const key = el.getAttribute('data-key-html');
+        if (data[key]) el.innerHTML = data[key];
+      });
+
+      if (data.logo_image) {
+        document.querySelectorAll('.brand-logo-img').forEach(el => el.src = data.logo_image);
+      }
+
+      if (data.ceo_name || data.ceo_title) {
+        document.getElementById('ceo-label').textContent =
+          (data.ceo_title || 'CEO & Manager') + ' — ' + (data.ceo_name || 'Muhammad Jabeer');
+      }
+      if (data.ceo_phone) {
+        document.getElementById('ceo-tel').href = 'tel:' + data.ceo_phone;
+        document.getElementById('ceo-wa').href = 'https://wa.me/' + data.ceo_phone.replace('+','');
+        document.getElementById('hero-whatsapp').href = 'https://wa.me/' + data.ceo_phone.replace('+','');
+      }
+      if (data.ceo_phone_display) document.getElementById('ceo-tel').textContent = data.ceo_phone_display;
+      if (data.office_phone) {
+        document.getElementById('office-tel').href = 'tel:' + data.office_phone;
+        document.getElementById('office-wa').href = 'https://wa.me/' + data.office_phone.replace('+','');
+      }
+      if (data.office_phone_display) document.getElementById('office-tel').textContent = data.office_phone_display;
+      if (data.email_primary) {
+        document.getElementById('email-primary').href = 'mailto:' + data.email_primary;
+        document.getElementById('email-primary').textContent = data.email_primary;
+      }
+      if (data.email_secondary) {
+        document.getElementById('email-secondary').href = 'mailto:' + data.email_secondary;
+        document.getElementById('email-secondary').textContent = data.email_secondary;
+      }
+
+      if (Array.isArray(data.services) && data.services.length) {
+        const grid = document.getElementById('services-grid');
+        grid.innerHTML = data.services.map((s, i) => `
+          <div class="svc-card">
+            ${svcIcons[i % svcIcons.length]}
+            <div class="svc-num">${String(i+1).padStart(2,'0')}</div>
+            <h3>${s.title}</h3>
+            <p>${s.description}</p>
+          </div>
+        `).join('');
+      }
+
+      if (Array.isArray(data.testimonials) && data.testimonials.length) {
+        const tgrid = document.getElementById('testimonials-grid');
+        tgrid.innerHTML = data.testimonials.map(t => {
+          const r = parseInt(t.rating) || 5;
+          const stars = '★'.repeat(r) + '☆'.repeat(5 - r);
+          return `
+            <div class="testi-card">
+              <div class="stars">${stars}</div>
+              <p>"${t.comment}"</p>
+              <div class="who">${t.name}</div>
+            </div>
+          `;
+        }).join('');
+      }
+    })
+    .catch(err => console.warn('Content file not loaded, showing defaults.', err));
+</script>
+
+</body>
+</html>
