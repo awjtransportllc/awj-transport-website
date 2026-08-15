@@ -11,17 +11,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy:#0B1730;
-    --steel:#1F3164;
-    --steel-light:#2A3F73;
-    --gold:#C0A542;
+    --navy:#1A2438;
+    --steel:#F1EFEA;
+    --steel-light:#E7E4DD;
+    --gold:#B8963C;
     --gold-dim:#8A7530;
-    --concrete:#E9E6DF;
-    --paper:#FAFAF8;
-    --ink:#0B1730;
-    --muted:#5b6b7c;
-    --line:rgba(11,23,48,0.12);
-    --line-light:rgba(255,255,255,0.14);
+    --concrete:#F4F2ED;
+    --paper:#FFFFFF;
+    --ink:#1A2438;
+    --muted:#68707c;
+    --line:rgba(26,36,56,0.12);
+    --line-light:rgba(26,36,56,0.10);
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
@@ -60,45 +60,45 @@
   /* ===== HEADER ===== */
   header{
     position:fixed; top:0; left:0; right:0; z-index:100;
-    background:rgba(11,23,48,0.96);
+    background:rgba(255,255,255,0.97);
     backdrop-filter:blur(6px);
-    border-bottom:1px solid var(--line-light);
+    border-bottom:1px solid var(--line);
   }
   .nav{
     max-width:1180px; margin:0 auto; padding:0 28px;
     height:92px; display:flex; align-items:center; justify-content:space-between;
   }
   .brand{display:flex; align-items:center;}
-  .brand-logo-img{height:76px; width:auto;}
+  .brand-logo-img{height:70px; width:auto;}
   nav.links{display:flex; gap:34px; align-items:center;}
   nav.links a{
-    color:#cfd9e3; font-size:13.5px; text-transform:uppercase; letter-spacing:0.08em;
+    color:#4a5568; font-size:13.5px; text-transform:uppercase; letter-spacing:0.08em;
     font-weight:500; transition:color .2s;
   }
-  nav.links a:hover{color:var(--gold);}
+  nav.links a:hover{color:var(--gold-dim);}
   .nav-cta{
-    background:var(--gold); color:var(--navy)!important; padding:10px 20px;
+    background:var(--gold); color:#fff!important; padding:10px 20px;
     font-weight:700; font-size:13px; text-transform:uppercase; letter-spacing:0.06em;
   }
-  .nav-cta:hover{background:#d6bb5a;}
+  .nav-cta:hover{background:#a2842f;}
   .burger{display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none;}
-  .burger span{width:24px; height:2px; background:#fff;}
+  .burger span{width:24px; height:2px; background:var(--navy);}
 
   /* ===== HERO ===== */
   .hero{
-    background:var(--navy);
-    color:#fff;
-    padding:174px 0 90px;
+    background:var(--concrete);
+    color:var(--ink);
+    padding:174px 0 80px;
     position:relative;
     overflow:hidden;
-    border-bottom:1px solid var(--line-light);
+    border-bottom:1px solid var(--line);
   }
   .hero::after{
     content:'';
     position:absolute; inset:0;
     background-image:
-      linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+      linear-gradient(rgba(26,36,56,0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(26,36,56,0.035) 1px, transparent 1px);
     background-size:44px 44px;
     pointer-events:none;
   }
@@ -108,12 +108,12 @@
   }
   .hero h1{
     font-size:clamp(38px, 5vw, 60px);
-    color:#fff;
+    color:var(--navy);
     margin:18px 0 22px;
   }
-  .hero h1 em{font-style:normal; color:var(--gold);}
+  .hero h1 em{font-style:normal; color:var(--gold-dim);}
   .hero p.lede{
-    font-size:17px; color:#c3cedb; max-width:520px; margin-bottom:34px; line-height:1.7;
+    font-size:17px; color:var(--muted); max-width:520px; margin-bottom:34px; line-height:1.7;
   }
   .btn-row{display:flex; gap:16px; flex-wrap:wrap;}
   .btn{
@@ -121,35 +121,36 @@
     letter-spacing:0.05em; display:inline-flex; align-items:center; gap:8px;
     border:1px solid transparent; transition:all .2s;
   }
-  .btn-primary{background:var(--gold); color:var(--navy);}
-  .btn-primary:hover{background:#d6bb5a; transform:translateY(-1px);}
-  .btn-ghost{border-color:rgba(255,255,255,0.35); color:#fff;}
-  .btn-ghost:hover{border-color:var(--gold); color:var(--gold);}
+  .btn-primary{background:var(--gold); color:#fff;}
+  .btn-primary:hover{background:#a2842f; transform:translateY(-1px);}
+  .btn-ghost{border-color:var(--navy); color:var(--navy);}
+  .btn-ghost:hover{border-color:var(--gold-dim); color:var(--gold-dim);}
 
   .stat-row{
-    display:flex; gap:0; margin-top:48px; border-top:1px solid var(--line-light); padding-top:26px;
+    display:flex; gap:0; margin-top:48px; border-top:1px solid var(--line); padding-top:26px;
   }
   .stat{flex:1; padding-right:20px;}
-  .stat .num{font-family:'Barlow Condensed'; font-size:32px; font-weight:700; color:var(--gold);}
-  .stat .lbl{font-size:12px; color:#a9b7c6; text-transform:uppercase; letter-spacing:0.06em; margin-top:4px;}
+  .stat .num{font-family:'Barlow Condensed'; font-size:32px; font-weight:700; color:var(--gold-dim);}
+  .stat .lbl{font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:0.06em; margin-top:4px;}
   .tagline-row{
     margin-top:22px; font-family:'JetBrains Mono'; font-size:12px; letter-spacing:0.14em;
-    text-transform:uppercase; color:#8fa0b3;
+    text-transform:uppercase; color:var(--muted);
   }
-  .tagline-row span{color:var(--gold); margin:0 6px;}
+  .tagline-row span{color:var(--gold-dim); margin:0 6px;}
 
   .map-box{
-    background:var(--steel);
-    border:1px solid var(--line-light);
+    background:#fff;
+    border:1px solid var(--line);
+    box-shadow:0 4px 24px rgba(26,36,56,0.06);
     padding:26px;
     position:relative;
   }
   .map-box .cap{
     display:flex; justify-content:space-between; align-items:center;
-    margin-bottom:14px; font-family:'JetBrains Mono'; font-size:11px; color:#9fb0c2;
+    margin-bottom:14px; font-family:'JetBrains Mono'; font-size:11px; color:var(--muted);
     text-transform:uppercase; letter-spacing:0.08em;
   }
-  .dot-live{width:7px; height:7px; background:var(--gold); border-radius:50%; display:inline-block; animation:pulse 1.6s infinite;}
+  .dot-live{width:7px; height:7px; background:var(--gold-dim); border-radius:50%; display:inline-block; animation:pulse 1.6s infinite;}
   @keyframes pulse{0%,100%{opacity:1;} 50%{opacity:0.35;}}
   .route-path{
     stroke-dasharray:6 220; stroke-dashoffset:0;
@@ -173,19 +174,19 @@
   .svc-icon{width:44px; height:44px; margin-bottom:6px;}
 
   /* ===== PROCESS ===== */
-  .process{background:var(--navy); color:#fff;}
-  .process .sec-head h2, .process .eyebrow{color:#fff;}
-  .process .sec-head p{color:#aab8c7;}
-  .proc-line{display:flex; border-top:1px solid var(--line-light);}
-  .proc-step{flex:1; padding:28px 20px 0; border-right:1px solid var(--line-light); position:relative;}
+  .process{background:var(--steel);}
+  .process .sec-head h2, .process .eyebrow{color:var(--navy);}
+  .process .sec-head p{color:var(--muted);}
+  .proc-line{display:flex; border-top:1px solid var(--line);}
+  .proc-step{flex:1; padding:28px 20px 0; border-right:1px solid var(--line); position:relative;}
   .proc-step:last-child{border-right:none;}
   .proc-step .pn{
-    font-family:'Barlow Condensed'; font-size:44px; font-weight:700; color:rgba(192,165,66,0.35);
+    font-family:'Barlow Condensed'; font-size:44px; font-weight:700; color:rgba(184,150,60,0.35);
     line-height:1;
   }
-  .proc-step h4{color:#fff; font-size:16px; margin:14px 0 8px; text-transform:none; letter-spacing:0;}
-  .proc-step p{font-size:13px; color:#9fb0c2; line-height:1.6;}
-  .proc-dot{position:absolute; top:-6px; left:0; width:10px; height:10px; background:var(--gold);}
+  .proc-step h4{color:var(--navy); font-size:16px; margin:14px 0 8px; text-transform:none; letter-spacing:0;}
+  .proc-step p{font-size:13px; color:var(--muted); line-height:1.6;}
+  .proc-dot{position:absolute; top:-6px; left:0; width:10px; height:10px; background:var(--gold-dim);}
 
   /* ===== FLEET ===== */
   .fleet-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
@@ -206,31 +207,32 @@
   .cred .s{font-size:12.5px; color:var(--muted); margin-top:3px;}
 
   /* ===== CONTACT ===== */
-  .contact{background:var(--navy); color:#fff;}
-  .contact .eyebrow{color:var(--gold);}
+  .contact{background:var(--concrete);}
+  .contact .eyebrow{color:var(--gold-dim);}
   .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:60px;}
   .c-block{margin-bottom:26px;}
-  .c-block .lbl{font-family:'JetBrains Mono'; font-size:11px; color:#8fa0b3; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px;}
-  .c-block .val{font-size:17px; color:#fff; font-weight:500;}
-  .c-block .val a{border-bottom:1px solid rgba(192,165,66,0.4);}
-  .c-block .val a:hover{color:var(--gold); border-color:var(--gold);}
-  form.quote{background:var(--steel); padding:34px; border:1px solid var(--line-light);}
+  .c-block .lbl{font-family:'JetBrains Mono'; font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px;}
+  .c-block .val{font-size:17px; color:var(--navy); font-weight:500;}
+  .c-block .val a{border-bottom:1px solid rgba(184,150,60,0.5);}
+  .c-block .val a:hover{color:var(--gold-dim); border-color:var(--gold-dim);}
+  form.quote{background:#fff; padding:34px; border:1px solid var(--line); box-shadow:0 4px 24px rgba(26,36,56,0.05);}
   form.quote .row{margin-bottom:18px;}
-  form.quote label{display:block; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:#9fb0c2; margin-bottom:7px;}
+  form.quote label{display:block; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--muted); margin-bottom:7px;}
   form.quote input, form.quote select, form.quote textarea{
-    width:100%; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.18);
-    color:#fff; padding:12px 14px; font-family:'Work Sans'; font-size:14px;
+    width:100%; background:var(--concrete); border:1px solid var(--line);
+    color:var(--navy); padding:12px 14px; font-family:'Work Sans'; font-size:14px;
   }
-  form.quote input:focus, form.quote select:focus, form.quote textarea:focus{outline:none; border-color:var(--gold);}
+  form.quote input:focus, form.quote select:focus, form.quote textarea:focus{outline:none; border-color:var(--gold-dim);}
   form.quote textarea{resize:vertical; min-height:90px;}
   form.quote button{width:100%; margin-top:6px;}
 
   /* ===== FOOTER ===== */
-  footer{background:#071022; color:#8291a3; padding:44px 0 26px;}
-  .foot-grid{display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:24px; border-bottom:1px solid var(--line-light); padding-bottom:30px;}
+  footer{background:#F4F2ED; color:var(--muted); padding:44px 0 26px; border-top:1px solid var(--line);}
+  .foot-grid{display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:24px; border-bottom:1px solid var(--line); padding-bottom:30px;}
   .foot-links{display:flex; gap:30px; font-size:13px;}
-  .foot-links a:hover{color:var(--gold);}
+  .foot-links a:hover{color:var(--gold-dim);}
   .foot-bottom{padding-top:22px; display:flex; justify-content:space-between; font-size:12px; flex-wrap:wrap; gap:10px;}
+  .foot-banner{max-width:280px; opacity:0.92;}
 
   @media(max-width:900px){
     .hero-grid{grid-template-columns:1fr; gap:40px;}
@@ -251,7 +253,7 @@
 <header>
   <div class="nav">
     <div class="brand" id="brand-logo-slot">
-      <img src="/images/logo.png" alt="A W J Transport LLC logo" class="brand-logo-img">
+      <img src="/images/logo_on_white.png" alt="A W J Transport LLC logo" class="brand-logo-img">
     </div>
     <nav class="links">
       <a href="#services">Services</a>
@@ -286,28 +288,21 @@
       <div class="cap"><span><span class="dot-live"></span> Live Route — Ras Al Khor → Jebel Ali Port</span><span>UAE</span></div>
       <svg viewBox="0 0 460 420" width="100%" height="auto">
         <path d="M60 40 L120 30 L200 55 L270 90 L330 150 L370 220 L390 290 L360 350 L300 390 L230 400 L170 380 L120 340 L90 280 L70 210 L55 140 Z"
-          fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
-        <path d="M255 195 C 210 220, 150 250, 95 275" fill="none" stroke="rgba(192,165,66,0.85)" stroke-width="2.5" class="route-path" stroke-linecap="round"/>
-        <path d="M255 195 C 290 230, 320 270, 330 320" fill="none" stroke="rgba(192,165,66,0.5)" stroke-width="2" stroke-dasharray="4 6"/>
-        <circle cx="255" cy="195" r="6" fill="#C0A542"/>
-        <text x="266" y="192" fill="#fff" font-family="JetBrains Mono" font-size="11">Ras Al Khor HQ</text>
-        <circle cx="95" cy="275" r="5" fill="#fff"/>
-        <text x="55" y="298" fill="#c3cedb" font-family="JetBrains Mono" font-size="10">Jebel Ali Port</text>
-        <circle cx="330" cy="320" r="5" fill="#fff"/>
-        <text x="300" y="345" fill="#c3cedb" font-family="JetBrains Mono" font-size="10">Khalifa Port</text>
-        <circle cx="200" cy="80" r="4" fill="#6b7f92"/>
-        <text x="150" y="70" fill="#7d8fa1" font-family="JetBrains Mono" font-size="10">Sharjah</text>
-        <circle cx="330" cy="150" r="4" fill="#6b7f92"/>
-        <text x="340" y="145" fill="#7d8fa1" font-family="JetBrains Mono" font-size="10">Fujairah</text>
+          fill="none" stroke="rgba(26,36,56,0.18)" stroke-width="1.5"/>
+        <path d="M255 195 C 210 220, 150 250, 95 275" fill="none" stroke="rgba(184,150,60,0.9)" stroke-width="2.5" class="route-path" stroke-linecap="round"/>
+        <path d="M255 195 C 290 230, 320 270, 330 320" fill="none" stroke="rgba(184,150,60,0.55)" stroke-width="2" stroke-dasharray="4 6"/>
+        <circle cx="255" cy="195" r="6" fill="#B8963C"/>
+        <text x="266" y="192" fill="#1A2438" font-family="JetBrains Mono" font-size="11">Ras Al Khor HQ</text>
+        <circle cx="95" cy="275" r="5" fill="#1A2438"/>
+        <text x="55" y="298" fill="#4a5568" font-family="JetBrains Mono" font-size="10">Jebel Ali Port</text>
+        <circle cx="330" cy="320" r="5" fill="#1A2438"/>
+        <text x="300" y="345" fill="#4a5568" font-family="JetBrains Mono" font-size="10">Khalifa Port</text>
+        <circle cx="200" cy="80" r="4" fill="#8a94a3"/>
+        <text x="150" y="70" fill="#8a94a3" font-family="JetBrains Mono" font-size="10">Sharjah</text>
+        <circle cx="330" cy="150" r="4" fill="#8a94a3"/>
+        <text x="340" y="145" fill="#8a94a3" font-family="JetBrains Mono" font-size="10">Fujairah</text>
       </svg>
     </div>
-  </div>
-</section>
-
-<!-- ===== OFFICE BANNER ===== -->
-<section style="padding:0; background:var(--paper);">
-  <div class="wrap" style="padding-top:36px; padding-bottom:36px;">
-    <img src="/images/office_banner.png" alt="A W J Transport LLC — Office 53, Al Habai Building, Ras Al Khor, Dubai" style="width:100%; height:auto; border:1px solid var(--line);">
   </div>
 </section>
 
@@ -457,6 +452,9 @@
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </div>
+    </div>
+    <div style="display:flex; justify-content:flex-end; padding:24px 0 8px;">
+      <img src="/images/office_banner.png" alt="A W J Transport LLC — Office 53, Al Habai Building, Ras Al Khor, Dubai" class="foot-banner" style="width:100%;">
     </div>
     <div class="foot-bottom">
       <span>© 2026 A W J Transport LLC. All rights reserved.</span>
