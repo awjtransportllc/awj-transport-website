@@ -66,10 +66,10 @@
   }
   .nav{
     max-width:1180px; margin:0 auto; padding:0 28px;
-    height:72px; display:flex; align-items:center; justify-content:space-between;
+    height:92px; display:flex; align-items:center; justify-content:space-between;
   }
   .brand{display:flex; align-items:center;}
-  .brand-logo-img{height:54px; width:auto;}
+  .brand-logo-img{height:76px; width:auto;}
   nav.links{display:flex; gap:34px; align-items:center;}
   nav.links a{
     color:#cfd9e3; font-size:13.5px; text-transform:uppercase; letter-spacing:0.08em;
@@ -88,7 +88,7 @@
   .hero{
     background:var(--navy);
     color:#fff;
-    padding:154px 0 90px;
+    padding:174px 0 90px;
     position:relative;
     overflow:hidden;
     border-bottom:1px solid var(--line-light);
@@ -304,6 +304,13 @@
   </div>
 </section>
 
+<!-- ===== OFFICE BANNER ===== -->
+<section style="padding:0; background:var(--paper);">
+  <div class="wrap" style="padding-top:36px; padding-bottom:36px;">
+    <img src="/images/office_banner.png" alt="A W J Transport LLC — Office 53, Al Habai Building, Ras Al Khor, Dubai" style="width:100%; height:auto; border:1px solid var(--line);">
+  </div>
+</section>
+
 <!-- ===== SERVICES ===== -->
 <section class="services" id="services">
   <div class="wrap">
@@ -370,8 +377,8 @@
 <!-- ===== ABOUT ===== -->
 <section class="about" id="about">
   <div class="wrap about-grid">
-    <div class="about-visual">
-      <img src="/images/logo.png" alt="A W J Transport LLC" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:78%; filter:drop-shadow(0 8px 24px rgba(0,0,0,0.4));">
+    <div class="about-visual" style="background:#fff; display:flex; align-items:center; justify-content:center; padding:32px;">
+      <img src="/images/logo_on_white.png" alt="A W J Transport LLC" style="width:100%; height:auto;">
     </div>
     <div class="about-body">
       <div class="eyebrow">About Us</div>
@@ -424,10 +431,13 @@
           <select name="service">
             <option>Container Transportation</option>
             <option>Customs Clearance</option>
+            <option>Company Registration</option>
+            <option>Documentation</option>
+            <option>Port Handling</option>
             <option>Reefer / Genset Service</option>
             <option>Flatbed Trailer</option>
             <option>Business Registration Support</option>
-            <option>Other</option>
+            <option>Other Services</option>
           </select>
         </div>
         <div class="row"><label>Shipment Details</label><textarea name="message" placeholder="Container type, size, origin/destination..."></textarea></div>
@@ -440,7 +450,7 @@
 <footer>
   <div class="wrap">
     <div class="foot-grid">
-      <div><img src="/images/logo.png" alt="A W J Transport LLC" style="height:36px; width:auto;"></div>
+      <div><img src="/images/logo.png" alt="A W J Transport LLC" style="height:56px; width:auto;"></div>
       <div class="foot-links">
         <a href="#services">Services</a>
         <a href="#fleet">Fleet</a>
@@ -459,7 +469,17 @@
   <input type="text" name="name" />
   <input type="text" name="company" />
   <input type="tel" name="phone" />
-  <select name="service"></select>
+  <select name="service">
+    <option>Container Transportation</option>
+    <option>Customs Clearance</option>
+    <option>Company Registration</option>
+    <option>Documentation</option>
+    <option>Port Handling</option>
+    <option>Reefer / Genset Service</option>
+    <option>Flatbed Trailer</option>
+    <option>Business Registration Support</option>
+    <option>Other Services</option>
+  </select>
   <textarea name="message"></textarea>
 </form>
 
